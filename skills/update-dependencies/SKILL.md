@@ -5,6 +5,8 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 
 # Pakete aktualisieren
 
+- Es dürfen keine GIT änderungen ausständig sein.
+
 ## Allgemeine Hinweise
 
 - Rate nicht die neue Versionsnummer: Sie muss der tatsächlich installierten oder veröffentlichten .NET-SDK-Patch-Version entsprechen (z. B. überprüft über `dotnet --version` oder die offizielle .NET-Release-Ankündigung unter `https://dotnet.microsoft.com/en-us/download/dotnet`).
