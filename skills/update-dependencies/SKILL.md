@@ -6,6 +6,7 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 # Pakete aktualisieren
 
 - Es dürfen keine GIT änderungen ausständig sein.
+- Wenn ein Major-Versionssprung eines Paketes durchgeführt wird, lese [Breaking Changes](references/breaking-changes.md)
 
 ## Allgemeine Hinweise
 
@@ -15,18 +16,13 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 - Beim Update der Major-Version von Syncfusion Paketen muss ein neuer Lizenzschlüssel angefordert werden. Minor-Versionen können mit dem bestehenden Lizenzschlüssel genutzt werden, daher können diese ohne Lizenzänderung aktualisiert werden.
 - Alle Pakete mit demselben Prefix (z. B. `syncfusion`, `sentry`) (NuGet und NPM) müssen, um Kompatibilitätsprobleme zu vermeiden, auf die gleiche Hauptversion aktualisiert werden. Wenn dies nicht möglich ist, muss der Benutzer um Bestätigung gebeten werden, dass die Aktualisierung für diese Pakete trotzdem durchgeführt werden soll.
 
-## Paketaktualisierungen verschiedener Paketmanager
-
+## Paketaktualisierungen
 
 | Paketmanager | Dateiendung | Updateüberprüfung | Weiterführende Schritte |
-|---|---|---|---|
-|NuGet |`*.csproj`, `*.sln`, `*.slnx`|`dotnet list package --outdated` | [Updateschritte](references/update.nuget.md)
-|NPM|`package.json`|`npm outdated`|[Updateschritte](references/update.npm.md)
-|NuGet| `*.esproj`| Überprüfe, ob ein neues Sdk, welches im Projekt Knoten mit dem Sdk Attribut angegeben ist, verfügbar ist |Version aktualisieren|
-
-## Major-Versionssprünge
-
-- Wenn ein Major-Versionssprung eines Paketes durchgeführt wird, lese [breaking-changes.md](references/breaking-changes.md)
+|-------|---|---|---|
+| NuGet | `*.slnx`, `*.sln`, `*.csproj` | `dotnet list package --outdated` | [Updateschritte](references/update.nuget.md) |
+| NuGet | `*.esproj` | Überprüfe, ob ein neues Sdk, welches im Projekt Knoten mit dem Sdk Attribut angegeben ist, verfügbar ist | Version aktualisieren |
+| NPM   | `package.json` | `npm outdated`| [Updateschritte](references/update.npm.md) |
 
 ## Commit-Konventionen für Paket-Updates
 
