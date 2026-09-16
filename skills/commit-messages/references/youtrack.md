@@ -9,7 +9,7 @@ Wenn der Commit zu einem bekannten YouTrack-Ticket gehört, wird nach einer Leer
 Bei mehreren Tickets:
 
 ```
-(#<ProjectPrefix>-<Nummer1>, #<ProjectPrefix>-<Nummer2>) fixed <Version>
+(#<ProjectPrefix>-<Nummer1>, #<ProjectPrefix>-<Nummer2>) fixed version <Version>
 ```
 
 In YouTrack prüfen ob das Feld `Behoben in Build` die aktuelle Kalenderwoche im Format `YY.WW` als auswählbare Option enthält. Wenn nicht, soll der Benutzer darauf hingewiesen werden, dass er das Feld in YouTrack anlegen soll. Danach kann die Version in der Commit-Message ergänzt werden. Dazu wird foldender Text in die Commit-Message eingefügt:
@@ -17,6 +17,10 @@ In YouTrack prüfen ob das Feld `Behoben in Build` die aktuelle Kalenderwoche im
 ```
 build <YY.WW>
 ```
+
+wenn keine Auswahloptionen bestehen, so wird dieser Schritt übersprungen
+
+## Allgemeine Informationen
 
 - Die Ticketnummer (`<ProjectPrefix>-<Ticketnummer>`) stammt aus YouTrack.
 - `<Version>` ist die aktuelle Version aus `version.json` im Repo-Root.
