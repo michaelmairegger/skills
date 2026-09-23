@@ -1,4 +1,4 @@
-## YouTrack-Ticket referenz (optional)
+## YouTrack-Ticket referenz
 
 Wenn der Commit zu einem bekannten YouTrack-Ticket gehört, wird nach einer Leerzeile eine Referenzzeile ergänzt:
 

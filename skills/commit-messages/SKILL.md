@@ -34,6 +34,11 @@ Diese Konventionen wurden aus der bestehenden Commit-Historie dieses Repositorie
 
 Wenn eine Änderung mehrere Aspekte abdeckt (z. B. neues Feld **und** UI-Anpassung), reicht ein `feat:`-Commit mit einer Beschreibung, die die wichtigsten Teile aufzählt (durch Kommas getrennt), so wie in:
 
-## YouTrack-Ticket referenz (optional)
+## Issue Tracking Systeme
 
-Wenn der Commit zu einem bekannten YouTrack-Ticket gehört, lese [YouTrack-Referenz](references/youtrack.md)
+Wenn der Commit zu einem bekannten Ticket in einem Issue Tracking System gehört, folgende Anleitungen beachten:
+
+| System   | Referenz                                    |
+|----------|---------------------------------------------|
+| YouTrack | [YouTrack-Referenz](references/youtrack.md) |
+| Sentry   | [Sentry-Referenz](references/sentry.md)     |
