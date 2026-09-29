@@ -5,14 +5,16 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 
 # Pakete aktualisieren
 
-- Es dürfen keine GIT änderungen ausständig sein.
+- Es dürfen keine GIT Änderungen ausständig sein.
 - Wenn ein Major-Versionssprung eines Paketes durchgeführt wird, lese [Breaking Changes](references/breaking-changes.md)
 
 ## Allgemeine Hinweise
 
 - Rate nicht die neue Versionsnummer: Sie muss der tatsächlich installierten oder veröffentlichten .NET-SDK-Patch-Version entsprechen (z. B. überprüft über `dotnet --version` oder die offizielle .NET-Release-Ankündigung unter `https://dotnet.microsoft.com/en-us/download/dotnet`).
 - Verwende diesen Skill bei Änderungen des .NET Patchversion (z. B. `10.0.10` → `10.0.11`). Für größere Migrationsschritte auf neue Major-Versionen (z.B. `.NET 10` → `.NET 11`) verwende den skill `migrate-dotnet{OLD_VERSION}-to-dotnet{NEW_VERSION}` (z.B. `migrate-dotnet10-to-dotnet11` für die Migration von .NET 10 zu .NET 11) welcher im Plugin `dotnet-upgrade@dotnet-agent-skills` verfügbar ist
-- Wenn keine .NET-Patchversion verfügbar ist, soll kein Paket aktalisiert werden. Jedoch soll der Nutzer gefragt werden, ob er die Pakete trotzdem aktualisieren möchte.
+- Wenn keine .NET-Patchversion verfügbar ist so sollen keine Pakete aktualisiert werden, es sei denn, einer der folgenden Fälle tritt ein:
+  - Die neue .NET Version wurde noch nicht in den Hauptbranch (z.b. `main`, `master`) gemerget.
+  - Nach Rückfrage, wenn bejaht wurde, dass die Pakete trotzdem aktualisiert werden sollen.
 - Beim Update der Major-Version von Syncfusion Paketen muss ein neuer Lizenzschlüssel angefordert werden. Minor-Versionen können mit dem bestehenden Lizenzschlüssel genutzt werden, daher können diese ohne Lizenzänderung aktualisiert werden.
 - Alle Pakete mit demselben Prefix (z. B. `syncfusion`, `sentry`) (NuGet und NPM) müssen, um Kompatibilitätsprobleme zu vermeiden, auf die gleiche Hauptversion aktualisiert werden. Wenn dies nicht möglich ist, muss der Benutzer um Bestätigung gebeten werden, dass die Aktualisierung für diese Pakete trotzdem durchgeführt werden soll.
 
