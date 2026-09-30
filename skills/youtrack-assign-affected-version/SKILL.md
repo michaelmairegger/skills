@@ -1,6 +1,6 @@
 ---
 name: youtrack-assign-affected-version
-description: Setzt in YouTrack das Feld `Affected Version` auf die Sentry-Release-Version des ersten Auftretens eines Sentry-Issues. Verwenden, wann immer die betroffene Version eines YouTrack-Tickets anhand eines Sentry-Issues gesetzt werden soll.
+description: Setzt in YouTrack das Feld `Affected Version` auf die Sentry-Release-Version des ersten Auftretens eines Sentry-Issues. Verwenden, wann immer ein Sentry-Issue in YouTrack referenziert wird, ein Sentry-Issue in ein YouTrack-Ticket überführt werden soll. Die Version des ersten Auftretens sollt bekannt sein.
 ---
 
 # Behavior
