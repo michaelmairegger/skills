@@ -8,6 +8,11 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 - Es dürfen keine GIT Änderungen ausständig sein.
 - Wenn ein Major-Versionssprung eines Paketes durchgeführt wird, lese [Breaking Changes](references/breaking-changes.md)
 
+# Major Updates von `Angular` `.NET`
+
+- Aktualisierungen sollen auf eigenen Branches (`migrate/<Typ>/<Major>`) durchgeführt werden, welche abschließend in den aktuellen Branch gemerged werden.
+- Sind bei beiden Technologien Updates notwending werden diese mit einen Oktobus-merge gemerged.
+
 ## Allgemeine Hinweise
 
 - Rate nicht die neue Versionsnummer: Sie muss der tatsächlich installierten oder veröffentlichten .NET-SDK-Patch-Version entsprechen (z. B. überprüft über `dotnet --version` oder die offizielle .NET-Release-Ankündigung unter `https://dotnet.microsoft.com/en-us/download/dotnet`).
@@ -25,6 +30,7 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 | NuGet | `*.slnx`, `*.sln`, `*.csproj` | `dotnet list package --outdated` | [Updateschritte](references/update.nuget.md) |
 | NuGet | `*.esproj` | Überprüfe, ob ein neues Sdk, welches im Projekt Knoten mit dem Sdk Attribut angegeben ist, verfügbar ist | Version aktualisieren |
 | NPM   | `package.json` | `npm outdated`| [Updateschritte](references/update.npm.md) |
+| PUB   | `pubspec.yaml` | `dart pub outdated`| [Updateschritte](references/update.pub.dev.md) |
 
 ## Commit-Konventionen für Paket-Updates
 
