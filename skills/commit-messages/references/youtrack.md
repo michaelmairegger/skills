@@ -26,6 +26,7 @@ wenn keine Auswahloptionen bestehen, so wird dieser Schritt übersprungen
 - `<Version>` ist die aktuelle Version aus `version.json` im Repo-Root.
 - Diese Zeile **nur ergänzen, wenn eine konkrete Ticketnummer bekannt ist** (z. B. vom User genannt oder aus dem Kontext ersichtlich). Ohne bekannte Ticketnummer wird die Zeile weggelassen — sie wird nicht erfunden oder geraten.
 
-## git-zweige
+## git-Zweige
 
-Wenn der Commit auf einen separaten Zweig passieren soll, so soll der Zweig den Namen `<typ>/<ticket-id>` haben, wobei Typ den Wert `hotfix` oder `feature` hat. Sollten mehrere Varianten gemacht werden, so soll der Zweig z.B. `feature/TICKET-1/variante-<benennung>` heißen.
+Wenn der Commit auf einen separaten Zweig passieren soll, so soll der Zweig den Namen `<typ>/<ticket-id>` haben, wobei Typ den Wert `hotfix` oder `feature` hat. 
+Bei mehreren Varianten des tickets, benenne die Zweige in folgendem Format z.B. `<typ>/<ticket-id>/<variante-benennung>`.
