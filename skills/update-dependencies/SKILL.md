@@ -21,6 +21,7 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
   - Die neue .NET Version wurde noch nicht in den Hauptbranch (z.b. `main`, `master`) gemerget.
   - Nach Rückfrage, wenn bejaht wurde, dass die Pakete trotzdem aktualisiert werden sollen.
 - Beim Update der Major-Version von Syncfusion Paketen muss ein neuer Lizenzschlüssel angefordert werden. Minor-Versionen können mit dem bestehenden Lizenzschlüssel genutzt werden, daher können diese ohne Lizenzänderung aktualisiert werden.
+- Nach jedem Update von Syncfusion-Paketen müssen die Lokalisierungsdateien mit dem Skill `update-syncfusion-l10n` abgeglichen werden.
 - Alle Pakete mit demselben Prefix (z. B. `syncfusion`, `sentry`) (NuGet und NPM) müssen, um Kompatibilitätsprobleme zu vermeiden, auf die gleiche Hauptversion aktualisiert werden. Wenn dies nicht möglich ist, muss der Benutzer um Bestätigung gebeten werden, dass die Aktualisierung für diese Pakete trotzdem durchgeführt werden soll.
 
 ## Paketaktualisierungen
