@@ -1,0 +1,14 @@
+{
+  "name": "mairegger",
+  "description": "Michael Mairegger's personal Claude Code plugins.",
+  "owner": {
+    "name": "Michael Mairegger"
+  },
+  "plugins": [
+    {
+      "name": "mairegger",
+      "source": "./",
+      "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration."
+    }
+  ]
+}
