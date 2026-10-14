@@ -1,0 +1,10 @@
+{
+  "name": "mairegger",
+  "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Michael Mairegger"
+  },
+  "repository": "https://github.com/michaelmairegger/skills",
+  "license": "MIT"
+}
