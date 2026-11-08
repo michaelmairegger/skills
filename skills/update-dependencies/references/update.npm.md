@@ -29,5 +29,4 @@
 Wenn folgende Pakete aktalisiert werden, so müssen nachfolgende Schritte ausgeführt weden:
 
 ### biome
-- Die Konfigurationsdate wir mit `migrate --write` migriert
-- Verwende `format --write` umd `.ts` , `.html`, `.scss` Dateien zu formattieren
+- Vorgehen siehe [Biome aktualisieren](update.biome.md): Konfiguration mit `migrate --write` migrieren, jede neue Regel und Option prüfen, Regeln zur Verbesserung der Lesbarkeit vorschlagen und erst nach Rückfrage aktivieren, `.ts`-, `.html`- und `.scss`-Dateien mit `format --write` formatieren.
