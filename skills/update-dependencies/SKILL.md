@@ -1,6 +1,6 @@
 ---
 name: update-dependencies
-description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie dabei `version.json` mitzuführen sind. Verwenden, wann immer NuGet-Pakete, npm-Pakete oder die Projekt-/.NET-Versionsnummer aktualisiert werden sollen. VERWENDE DIESEN SKILL NICHT FÜR MIGRATIONEN AUF NEUE MAJOR-VERSIONEN VON .NET
+description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie dabei `version.json` mitzuführen sind. Verwenden, wann immer NuGet-Pakete, npm-Pakete oder die Projekt-/.NET-Versionsnummer aktualisiert werden sollen
 ---
 
 # Pakete aktualisieren
@@ -16,7 +16,7 @@ description: Beschreibt, wie NuGet- und npm-Pakete aktualisiert werden und wie d
 ## Allgemeine Hinweise
 
 - Rate nicht die neue Versionsnummer: Sie muss der tatsächlich installierten oder veröffentlichten .NET-SDK-Patch-Version entsprechen (z. B. überprüft über `dotnet --version` oder die offizielle .NET-Release-Ankündigung unter `https://dotnet.microsoft.com/en-us/download/dotnet`).
-- Verwende diesen Skill bei Änderungen des .NET Patchversion (z. B. `10.0.10` → `10.0.11`). Für größere Migrationsschritte auf neue Major-Versionen (z.B. `.NET 10` → `.NET 11`) verwende den skill `migrate-dotnet{OLD_VERSION}-to-dotnet{NEW_VERSION}` (z.B. `migrate-dotnet10-to-dotnet11` für die Migration von .NET 10 zu .NET 11) welcher im Plugin `dotnet-upgrade@dotnet-agent-skills` verfügbar ist
+- Verwende diesen Skill bei Änderungen des .NET Patchversion (z. B. `10.0.10` → `10.0.11`). Für größere Migrationsschritte auf neue Major-Versionen (z.B. `.NET 10` → `.NET 11`) verwende vorab den skill `migrate-dotnet{OLD_VERSION}-to-dotnet{NEW_VERSION}` (z.B. `migrate-dotnet10-to-dotnet11` für die Migration von .NET 10 zu .NET 11) welcher im Plugin `dotnet-upgrade@dotnet-agent-skills` verfügbar ist
 - Wenn keine .NET-Patchversion verfügbar ist so sollen keine Pakete aktualisiert werden, es sei denn, einer der folgenden Fälle tritt ein:
   - Die neue .NET Version wurde noch nicht in den Hauptbranch (z.b. `main`, `master`) gemerget.
   - Nach Rückfrage, wenn bejaht wurde, dass die Pakete trotzdem aktualisiert werden sollen.
