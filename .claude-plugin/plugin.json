@@ -1,7 +1,7 @@
 {
   "name": "mairegger",
-  "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration.",
-  "version": "1.0.1",
+  "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration, ASP.NET Core config comparison.",
+  "version": "1.1.0",
   "author": {
     "name": "Michael Mairegger"
   },

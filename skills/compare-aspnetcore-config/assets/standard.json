@@ -1,0 +1,45 @@
+{
+  // Agreed target values. Keys are flattened like in the comparison table (case-insensitive).
+  // "(set)" = any non-empty value, "\"\"" = empty string. Seq/SpaProxy keys are skipped where not applicable.
+  //
+  // A file name as section: the value must be in exactly that file (its location matters).
+  // "Production" / "Development": the effective value after merging the files, no matter where it is set.
+
+  "appsettings.json": {
+    "$schema": "https://www.schemastore.org/appsettings.json",
+    "Sentry:Dsn": "\"\"",
+    "Sentry:SendDefaultPii": "true",
+    "Sentry:MinimumBreadcrumbLevel": "Debug",
+    "Sentry:MinimumEventLevel": "Warning",
+    "Sentry:AttachStacktrace": "true",
+    "Sentry:TracesSampleRate": "1"
+  },
+  "appsettings.Production.json": {
+    "$schema": "https://www.schemastore.org/appsettings.json",
+    "Sentry:Dsn": "(set)"
+  },
+  "appsettings.Development.json": {
+    "$schema": "https://www.schemastore.org/appsettings.json"
+  },
+
+  "Production": {
+    "Serilog:MinimumLevel:Default": "Information",
+    "Serilog:MinimumLevel:Override:Microsoft": "Warning",
+    "Serilog:MinimumLevel:Override:System": "Warning",
+    "Serilog:MinimumLevel:Override:Microsoft.Hosting.Lifetime": "Information",
+    "Serilog:WriteTo:Sentry:Args:minimumBreadcrumbLevel": "Debug",
+    "Serilog:WriteTo:Sentry:Args:minimumEventLevel": "Warning",
+    "Serilog:LevelSwitches:seqSwitch": "Verbose",
+    "Serilog:WriteTo:Seq:Args:apiKey": "(set)",
+    "Serilog:WriteTo:Seq:Args:controlLevelSwitch": "$seqSwitch"
+  },
+  "Development": {
+    "Sentry:Dsn": "\"\"",
+    "Serilog:MinimumLevel:Default": "Information",
+    "Serilog:MinimumLevel:Override:Microsoft": "Warning",
+    "Serilog:MinimumLevel:Override:System": "Warning",
+    "Serilog:MinimumLevel:Override:Microsoft.EntityFrameworkCore": "Information",
+    "Serilog:MinimumLevel:Override:Microsoft.AspNetCore.SpaProxy": "Information",
+    "Serilog:WriteTo:Console": "on"
+  }
+}
