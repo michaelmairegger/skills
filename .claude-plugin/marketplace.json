@@ -8,8 +8,7 @@
     {
       "name": "mairegger",
       "source": "./",
-      "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration, ASP.NET Core config comparison, project version and support overview.",
-      "version": "1.2.0"
+      "description": "Personal workflow skills: commit messages, dependency updates, WpfAnalyzers sync, Sentry/YouTrack integration, ASP.NET Core config comparison, project version and support overview."
     }
   ]
 }
